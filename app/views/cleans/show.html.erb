@@ -1,0 +1,14 @@
+<% provide(:title, @clean.kind) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="clean_info">
+      <h1>
+        <h2></h2>
+        <h2>Date: <%= @clean.date %> <br> Kind: <%= @clean.kind %></h2>
+      </h1>
+    </section>
+  </aside>
+</div>
+ 
+<%= link_to 'Edit', edit_clean_path(@clean) %> |
+<%= link_to 'Back', cleans_path %>

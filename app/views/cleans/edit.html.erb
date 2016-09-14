@@ -1,0 +1,19 @@
+<% provide(:title, 'Edit Cleaning Schedule') %>
+<h1>Edit Cleaning Schedule</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for :clean, url: clean_path(@clean), method: :patch do |f| %>
+
+      <%= f.label :date %>
+      <%= f.text_field :date, class: 'form-control' %>
+
+
+      <%= f.label :kind %>
+      <%= f.text_field :kind, class: 'form-control'  %>
+
+
+      <%= f.submit "Save Changes", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

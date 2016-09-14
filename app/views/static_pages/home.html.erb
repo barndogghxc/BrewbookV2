@@ -1,0 +1,16 @@
+<% provide(:title, "Home") %>
+<div class="center jumbotron">
+  <h1>Welcome to the Brewbook App</h1>
+
+  <h2>
+    This is the home page for the
+    Brewbook
+    application.
+  </h2>
+
+  <%= link_to "Materials", materials_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to "Schedule", schedules_path, class: "btn btn-lg btn-primary" %>
+</div>
+
+<%= link_to image_tag("Brewery.jpg", alt: "Brewery logo"),
+            'http://rubyonrails.org/' %>

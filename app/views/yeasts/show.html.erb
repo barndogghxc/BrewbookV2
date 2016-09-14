@@ -1,0 +1,14 @@
+<% provide(:title, @yeast.kind) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="yeast_info">
+      <h1>
+        <h2></h2>
+        <h2>Kind: <%= @yeast.kind %> <br> Amount: <%= @yeast.amount %></h2>
+      </h1>
+    </section>
+  </aside>
+</div>
+ 
+<%= link_to 'Edit', edit_yeast_path(@yeast) %> |
+<%= link_to 'Back', yeasts_path %>

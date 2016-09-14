@@ -1,0 +1,19 @@
+<% provide(:title, 'Edit Hop') %>
+<h1>Edit Hop</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for :hop, url: hop_path(@hop), method: :patch do |f| %>
+    
+      <%= f.label :kind %>
+      <%= f.text_field :kind, class: 'form-control' %>
+
+
+      <%= f.label :amount %>
+      <%= f.text_field :amount, class: 'form-control'  %>
+
+
+      <%= f.submit "Save Changes", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

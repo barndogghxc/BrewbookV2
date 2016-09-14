@@ -1,0 +1,26 @@
+<% provide(:title, 'All hops') %>
+<h1>Listing hops</h1>
+ 
+ <%= link_to new_hop_path, class: 'btn btn-success' do %>
+  <i class="glyphicon glyphicon-plus"></i> New Hop
+<% end %>
+<table>
+  <tr>
+    <th>Kind</th>
+    <th>Amount</th>
+  </tr>
+ 
+  <% @hops.each do |hop| %>
+    <tr>
+      <td><%= hop.kind %></td>
+      <td><%= hop.amount %></td>
+      <td><%= link_to 'Show', hop_path(hop), class: 'btn btn-primary btn-xs' %></td>
+      <td><%= link_to 'Edit', edit_hop_path(hop), class: 'btn btn-info btn-xs' %></td>
+      <td><%= link_to 'Destroy', hop_path(hop),
+              method: :delete,
+              data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Back', materials_path %>

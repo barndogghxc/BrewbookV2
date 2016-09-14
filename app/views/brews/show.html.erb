@@ -1,0 +1,14 @@
+<% provide(:title, @brew.kind) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="brew_info">
+      <h1>
+        <h2></h2>
+        <h2>Date: <%= @brew.date %> <br> Kind: <%= @brew.kind %></h2>
+      </h1>
+    </section>
+  </aside>
+</div>
+ 
+<%= link_to 'Edit', edit_brew_path(@brew) %> |
+<%= link_to 'Back', brews_path %>

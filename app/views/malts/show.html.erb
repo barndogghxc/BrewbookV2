@@ -1,0 +1,14 @@
+<% provide(:title, @malt.kind) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="malt_info">
+      <h1>
+        <h2></h2>
+        <h2>Kind: <%= @malt.kind %> <br> Amount: <%= @malt.amount %></h2>
+      </h1>
+    </section>
+  </aside>
+</div>
+ 
+<%= link_to 'Edit', edit_malt_path(@malt) %> |
+<%= link_to 'Back', malts_path %>

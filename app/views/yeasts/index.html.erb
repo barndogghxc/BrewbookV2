@@ -1,0 +1,26 @@
+<% provide(:title, 'All yeasts') %>
+<h1>Listing yeasts</h1>
+ 
+ <%= link_to new_yeast_path, class: 'btn btn-success' do %>
+  <i class="glyphicon glyphicon-plus"></i> New Yeast
+<% end %>
+<table>
+  <tr>
+    <th>Kind</th>
+    <th>Amount</th>
+  </tr>
+ 
+  <% @yeasts.each do |yeast| %>
+    <tr>
+      <td><%= yeast.kind %></td>
+      <td><%= yeast.amount %></td>
+      <td><%= link_to 'Show', yeast_path(yeast), class: 'btn btn-primary btn-xs' %></td>
+      <td><%= link_to 'Edit', edit_yeast_path(yeast), class: 'btn btn-info btn-xs' %></td>
+      <td><%= link_to 'Destroy', yeast_path(yeast),
+              method: :delete,
+              data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Back', materials_path %>

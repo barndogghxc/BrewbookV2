@@ -1,0 +1,18 @@
+<% provide(:title, 'Brew') %>
+<h1>New Brew</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@brew, url: brews_path) do |f| %>
+    
+      <%= f.label :date%>
+      <%= f.text_field :date, class: 'form-control' %>
+
+
+      <%= f.label :kind %>
+      <%= f.text_field :kind, class: 'form-control'  %>
+
+      <%= f.submit "Create new brew", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
